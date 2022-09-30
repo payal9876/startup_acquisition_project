@@ -37,11 +37,11 @@ def predict():
     if mypred==1:
        mypred='acquired'
     elif mypred==2:
-       mypred='operating'
+         mypred='operating'
     elif mypred==3:
-        mypred='closed'
+         mypred='closed'
     else:
-        mypred='ipo'
+         mypred='ipo'
     
     return render_template('result.html',prediction=mypred) 
 
