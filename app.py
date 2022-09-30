@@ -29,7 +29,7 @@ def predict():
     data=['FUNDING_ROUNDS','TOTAL_FUNDING_USD','MILESTONES','RELATIONSHIPS','langitude','longitude','active_days']    
     features_value=[np.array(data)]
 
-    feature_name=['funding_rounds',	'funding_total_usd','milestones','relationships','lat','lng','active_days']
+    feature_name=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
 
     df=pd.DataFrame(features_value,columns=feature_name)
     mypred=model.predict(df)
