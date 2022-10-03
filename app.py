@@ -18,11 +18,11 @@ def home():
 def predict():
 
     funding_rounds=int(request.form["funding_rounds"])
-    funding_total_usd=int(request.form['TOTAL_FUNDING_USD'])
-    milestones=int(request.form['MILESTONES'])
+    funding_total_usd=int(request.form['funding_total_usd'])
+    milestones=int(request.form['milestones'])
     relationships=int(request.form['relationships'])
-    lat=float(request.form['latitude'])
-    lng=float(request.form['longitude'])
+    lat=float(request.form['lat'])
+    lng=float(request.form['lng'])
     active_days=int(request.form['active_days'])
     
     data=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
@@ -45,7 +45,8 @@ def predict():
     else:
         output='ipo'
     
-    return render_template('result.html',prediction=output) 
+    return render_template('result.html',prediction=output)
+
 
 
 
