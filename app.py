@@ -33,20 +33,21 @@ def predict():
 
     df=pd.DataFrame(features_value,columns=feature_name)
     mypred=model.predict(df)
+    output=mypred[0]
 
-    if mypred==1:
-       mypred='acquired'
-    elif mypred==2:
-         mypred='operating'
-    elif mypred==3:
-         mypred='closed'
+    if output==1:
+       output='acquired'
+    elif output==2:
+         output='operating'
+    elif output==3:
+         output='closed'
     else:
-         mypred='ipo'
+        output='ipo'
     
-    return render_template('result.html',prediction=mypred) 
+    return render_template('result.html',prediction=output) 
 
 
 
 
 if __name__=="main":
-    app.run(debug=True)
+    app.run()
