@@ -26,7 +26,7 @@ def predict():
     active_days=int(request.form['active_days'])
     
 
-    data=['FUNDING_ROUNDS','TOTAL_FUNDING_USD','MILESTONES','RELATIONSHIPS','langitude','longitude','active_days']    
+    data=['FUNDING_ROUNDS','TOTAL_FUNDING_USD','MILESTONES','RELATIONSHIPS','latitude','longitude','active_days']    
     features_value=[np.array(data)]
 
     feature_name=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
