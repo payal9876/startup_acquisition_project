@@ -1,12 +1,4 @@
 from flask import Flask,request,render_template
-
-
-
-
-
-
-
-
 import pickle
 import numpy as np
 import pandas as pd
@@ -25,13 +17,13 @@ def home():
 
 def predict():
 
-    funding_rounds=float(request.form["funding_rounds"])
-    funding_total_usd=float(request.form['funding_total_usd'])
-    milestones=float(request.form['milestones'])
-    relationships=float(request.form['relationships'])
-    lat=float(request.form['lat'])
-    lng=float(request.form['lng'])
-    active_days=float(request.form['active_days'])
+    funding_rounds=request.form["funding_rounds"]
+    funding_total_usd=request.form['funding_total_usd']
+    milestones=request.form['milestones']
+    relationships=request.form['relationships']
+    lat=request.form['lat']
+    lng=request.form['lng']
+    active_days=request.form['active_days']
     
     data=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
 
