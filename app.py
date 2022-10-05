@@ -25,15 +25,10 @@ def predict():
     lng=request.form['lng']
     active_days=request.form['active_days']
     
-    data=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
+    data=[['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']]
 
-    
-    features_value=[np.array(data)]
-
-    feature_name=['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']
-
-    df=pd.DataFrame(features_value,columns=feature_name)
-    mypred=model.predict(df)
+   
+    mypred=model.predict(data)
     output=mypred[0]
 
     if output==1:
