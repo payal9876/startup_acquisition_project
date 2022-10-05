@@ -25,7 +25,7 @@ def predict():
     lng=request.form['lng']
     active_days=request.form['active_days']
     
-    data=[['funding_rounds','funding_total_usd','milestones','relationships','lat','lng','active_days']]
+    data=[[funding_rounds,funding_total_usd,milestones,relationships,lat,lng,active_days]]
 
    
     mypred=model.predict(data)
